@@ -30,7 +30,9 @@
 
 * Add CouchDB connector to db config node
 
+### Other
 
+* -get node for manual retrieval of data
 
 ## Completed
 
