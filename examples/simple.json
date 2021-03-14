@@ -1,0 +1,83 @@
+[
+    {
+        "id": "2aa520e4.5e6b1",
+        "type": "pouchdb-in",
+        "z": "6f599144.4eb2b",
+        "name": "",
+        "topic": "",
+        "dbconfig": "e0ba6f7.0bc879",
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "d29cc4a9.e104e8"
+            ]
+        ]
+    },
+    {
+        "id": "d29cc4a9.e104e8",
+        "type": "debug",
+        "z": "6f599144.4eb2b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9fbfe593.c6ad98",
+        "type": "pouchdb-out",
+        "z": "6f599144.4eb2b",
+        "name": "",
+        "topic": "",
+        "dbconfig": "e0ba6f7.0bc879",
+        "x": 490,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "67152fd2.5f4bf",
+        "type": "inject",
+        "z": "6f599144.4eb2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "id",
+                "v": "testy1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "testy",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "9fbfe593.c6ad98"
+            ]
+        ]
+    },
+    {
+        "id": "e0ba6f7.0bc879",
+        "type": "pouchdb-db",
+        "dbname": "testydb2"
+    }
+]

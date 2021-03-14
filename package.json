@@ -1,0 +1,70 @@
+{
+  "name": "node-red-contrib-pouchdb",
+  "version": "0.0.1-dev1",
+  "description": "A Node-RED module for interfacing with PouchDB.",
+  "scripts": {
+    "npmtags": "npm dist-tag ls node-red-contrib-pouchdb",
+    "npmtagnext": "npm dist-tag add node-red-contrib-pouchdb@$npm_package_version next",
+    "gittags": "git tag",
+    "gittag": "git tag -a v%npm_package_version%",
+    "gitpushtags": "git push origin --tags",
+    "docs": "docsify serve ./docs"
+  },
+  "dependencies": {
+    "pouchdb-node": "^7.2.2"
+  },
+  "devDependencies": {
+    "@types/node-red": "^1.1.1"
+  },
+  "optionalDependencies": {},
+  "node-red": {
+    "version": ">=1.0.0",
+    "nodes": {
+      "pouchdb-out": "nodes/pouchdb-out.js",
+      "pouchdb-in": "nodes/pouchdb-in.js",
+      "pouchdb-db": "nodes/pouchdb-db.js"
+    }
+  },
+  "engines": {
+    "node": ">=10.6"
+  },
+  "directories": {
+    "example": "./examples",
+    "doc": "./docs",
+    "lib": "./nodes",
+    "test": "./tests"
+  },
+  "main": "./nodes/pouchdb-in.js",
+  "browserslist": [
+    "> 0.5%",
+    "maintained node versions",
+    "last 2 versions",
+    "not dead",
+    "not ie < 11"
+  ],
+  "keywords": [
+    "node-red",
+    "db",
+    "pouchdb",
+    "database",
+    "data",
+    "data-store"
+  ],
+  "homepage": "https://github.com/TotallyInformation/node-red-contrib-pouchdb",
+  "bugs": "https://github.com/TotallyInformation/node-red-contrib-pouchdb/issues",
+  "author": {
+    "name": "Julian Knight",
+    "url": "https://github.com/TotallyInformation"
+  },
+  "contributors": [
+    {
+      "name": "Julian Knight",
+      "url": "https://github.com/TotallyInformation"
+    }
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TotallyInformation/node-red-contrib-pouchdb.git"
+  }
+}

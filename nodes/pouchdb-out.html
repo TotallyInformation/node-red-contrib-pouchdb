@@ -1,0 +1,66 @@
+<script type="text/javascript">
+    /* eslint-env browser es6 */
+    
+    // Isolate this code
+    ;(function () {
+        'use strict'
+    
+        /** @typedef {import("node-red").Red} Red */
+    
+        //#region --------- "global" variables for the panel --------- //
+    
+        /** Module name must match this nodes html file @constant {string} moduleName */
+        var moduleName  = 'pouchdb-out'
+        /** Node's label @constant {string} paletteCategory */
+        var nodeLabel  = 'pouchdb-out'
+        /** Node's palette category @constant {string} paletteCategory */
+        var paletteCategory  = 'storage'
+        /** Node's background color @constant {string} paletteColor */
+        var paletteColor  = '#E6E0F8'
+        /** Default session length (in seconds) if security is active @type {Number} */
+
+        RED.nodes.registerType(moduleName, {
+            category: paletteCategory,
+            color: paletteColor,
+            defaults: {
+                name: { value: '' },
+                topic: { value: '' },
+
+                // Configuration node. Type=Node Type Name
+                dbconfig: { value: '', type: 'pouchdb-db' },
+
+            },
+            // credentials: {
+            //     jwtSecret: { type:'password' },  // text or password
+            // },
+            inputs: 1,
+            inputLabels: 'Data to send to PouchDB',
+            outputs: 0,
+            outputLabels: ['Data changes from PouchDB', ],
+            icon: 'ui_template.png',
+            paletteLabel: nodeLabel,
+            label: function () { return this.name || nodeLabel },
+
+        }) // ---- End of registerType() ---- //
+
+    })()
+</script>
+
+<script type="text/html" data-template-name="pouchdb-out">
+    <div class="form-row" id="name-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name">
+    </div>
+
+    <div class="form-row" id="topic-row">
+        <label for="node-input-topic"><i class="fa fa-tasks"></i> Topic</label>
+        <input type="text" id="node-input-topic">
+    </div>
+
+    <div class="form-row" id="db-config-node-row">
+        <label for="node-input-dbconfig"><i class="fa fa-tag"></i> Database</label>
+        <input type="text" id="node-input-dbconfig">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="pouchdb-out"></script>

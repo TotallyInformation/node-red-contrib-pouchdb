@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    /* eslint-env browser es6 */
+    
+    // Isolate this code
+    ;(function () {
+        'use strict'
+    
+        /** Module name must match this nodes html file @constant {string} moduleName */
+        var nodeName  = 'pouchdb-db'
+
+        RED.nodes.registerType(nodeName, {
+            category: 'config', // Palette category - specific to config nodes
+            defaults: {
+                dbname: { value: '', required: true },
+            },
+            label: function () { return this.dbname },
+
+        }) // ---- End of registerType() ---- //
+
+    })()
+</script>
+
+<script type="text/html" data-template-name="pouchdb-db">
+    <div class="form-row" id="dbname-row">
+        <label for="node-config-input-dbname"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-dbname">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="pouchdb-db"></script>
