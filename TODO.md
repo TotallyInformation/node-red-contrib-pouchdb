@@ -33,6 +33,7 @@
 ### Other
 
 * -get node for manual retrieval of data
+* Investigate local persistance options for LevelDB (the default db type on Node.js)
 
 ## Completed
 
