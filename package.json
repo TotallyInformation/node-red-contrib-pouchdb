@@ -11,7 +11,7 @@
     "docs": "docsify serve ./docs"
   },
   "dependencies": {
-    "pouchdb-node": "^7.2.2"
+    "pouchdb-node": "^7.3.1"
   },
   "devDependencies": {
     "@types/node-red": "^1.1.1"
